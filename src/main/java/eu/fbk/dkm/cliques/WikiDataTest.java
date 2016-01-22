@@ -3,6 +3,7 @@ package eu.fbk.dkm.cliques;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.wikidata.wdtk.datamodel.interfaces.*;
+import org.wikidata.wdtk.datamodel.json.jackson.datavalues.JacksonValueItemId;
 import org.wikidata.wdtk.dumpfiles.DumpProcessingController;
 import org.wikidata.wdtk.dumpfiles.EntityTimerProcessor;
 import org.wikidata.wdtk.dumpfiles.MwLocalDumpFile;
@@ -58,14 +59,40 @@ public class WikiDataTest implements EntityDocumentProcessor {
         Long birthDate = null;
         Long deathDate = null;
 
+        String familyName = null;
+        String givenName = null;
+
         String enwikiPageName;
         try {
-            enwikiPageName = itemDocument.getSiteLinks().get("enwiki").getPageTitle();
+            enwikiPageName = itemDocument.getSiteLinks().get("enwiki").getPageTitle().replaceAll("\\s+", "_");
         } catch (NullPointerException e) {
             return;
         }
 
         for (StatementGroup sg : itemDocument.getStatementGroups()) {
+            if ("P734".equals(sg.getProperty().getId())) {
+                for (Statement statement : sg.getStatements()) {
+                    Snak mainSnak = statement.getClaim().getMainSnak();
+                    if (mainSnak instanceof ValueSnak) {
+                        Value value = ((ValueSnak) mainSnak).getValue();
+                        if (value instanceof ItemIdValue) {
+                            familyName = ((ItemIdValue) value).getIri();
+                            System.out.println(familyName);
+                        }
+                    }
+                }
+            }
+            if ("P735".equals(sg.getProperty().getId())) {
+                for (Statement statement : sg.getStatements()) {
+                    Snak mainSnak = statement.getClaim().getMainSnak();
+                    if (mainSnak instanceof ValueSnak) {
+                        Value value = ((ValueSnak) mainSnak).getValue();
+                        if (value instanceof StringValue) {
+                            givenName = ((StringValue) value).getString();
+                        }
+                    }
+                }
+            }
             if ("P570".equals(sg.getProperty().getId())) {
                 for (Statement statement : sg.getStatements()) {
                     Snak mainSnak = statement.getClaim().getMainSnak();
@@ -94,12 +121,16 @@ public class WikiDataTest implements EntityDocumentProcessor {
             try {
                 String birthDateString = birthDate == null ? "null" : birthDate.toString();
                 String deathDateString = deathDate == null ? "null" : deathDate.toString();
+                String givenNameString = givenName == null ? "null" : givenName;
+                String familyNameString = familyName == null ? "null" : familyName;
 
                 writer
                         .append(itemDocument.getItemId().getId()).append("\t")
                         .append(enwikiPageName).append("\t")
                         .append(birthDateString).append("\t")
-                        .append(deathDateString).append("\n");
+                        .append(deathDateString).append("\t")
+                        .append(givenNameString).append("\t")
+                        .append(familyNameString).append("\n");
             } catch (IOException e) {
                 e.printStackTrace();
             }
