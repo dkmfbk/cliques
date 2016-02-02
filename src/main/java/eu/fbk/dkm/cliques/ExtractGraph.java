@@ -17,6 +17,7 @@ import org.slf4j.LoggerFactory;
 
 import java.io.*;
 import java.util.*;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.zip.GZIPInputStream;
 
 /**
@@ -63,6 +64,8 @@ public class ExtractGraph {
                             true)
                     .withOption("c", "clusters", "Input file with clusters", "FILE", CommandLine.Type.FILE_EXISTING,
                             true, false, true)
+                    .withOption("m", "cluster-mappings", "Input file with cluster mappings", "FILE",
+                            CommandLine.Type.FILE_EXISTING, true, false, true)
                     .withOption("d", "dates", "List of dates", "FILE", CommandLine.Type.FILE_EXISTING, true, false,
                             true)
                     .withOption("o", "output", "Output file", "FILE", CommandLine.Type.FILE, true, false, false)
@@ -86,6 +89,7 @@ public class ExtractGraph {
 
             File inputFolder = cmd.getOptionValue("input", File.class);
             File csvFile = cmd.getOptionValue("clusters", File.class);
+            File csvFileMap = cmd.getOptionValue("cluster-mappings", File.class);
             File datesFile = cmd.getOptionValue("dates", File.class);
 
             File outputFile = cmd.getOptionValue("output", File.class);
@@ -106,12 +110,22 @@ public class ExtractGraph {
             Reader in;
 
             if (useClusters) {
-                LOGGER.info("Loading clusters file");
+                LOGGER.info("Loading clusters files");
+
                 in = new FileReader(csvFile);
-                for (CSVRecord record : CSVFormat.DEFAULT.parse(in)) {
+                for (CSVRecord record : CSVFormat.newFormat('\t').parse(in)) {
                     String clusterName = record.get(0);
                     for (int i = 1; i < record.size(); i++) {
                         clusters.put(record.get(i), clusterName);
+                    }
+                }
+                in.close();
+
+                in = new FileReader(csvFileMap);
+                for (CSVRecord record : CSVFormat.newFormat('\t').parse(in)) {
+                    String cluster = clusters.get(record.get(1));
+                    if (cluster != null) {
+                        clusters.put(record.get(0), cluster);
                     }
                 }
                 in.close();
@@ -129,7 +143,7 @@ public class ExtractGraph {
 
             HashMultimap<String, String> topics = HashMultimap.create();
             HashMap<String, HashMap<String, Double>> linksForClusters = new HashMap<>();
-            Integer skipped = 0;
+            AtomicInteger skipped = new AtomicInteger(0);
             Integer modifiedCliques = 0;
             Integer addedPersons = 0;
 
@@ -305,7 +319,10 @@ public class ExtractGraph {
             }
 
             FrequencyHashSet<Integer> cliqueStats = new FrequencyHashSet<>();
+            FrequencyHashSet<Integer> cliqueAddedStats = new FrequencyHashSet<>();
+
             int nCliques = 0;
+            LOGGER.info("Graph size: {}", graph.edgeSet().size());
             BronKerboschCliqueFinder<String, DefaultEdge> cliqueFinder = new BronKerboschCliqueFinder<>(graph);
             Collection<Set<String>> cliques = cliqueFinder.getAllMaximalCliques();
 
@@ -316,6 +333,8 @@ public class ExtractGraph {
                     // Consider also almost-cliques
                     if (useAlmostCliques && size >= minCliqueSizeForAlmost) {
                         FrequencyHashSet<String> neighbors = new FrequencyHashSet<>();
+
+                        LOGGER.debug("Clique: {}", clique);
 
                         for (String s : clique) {
                             for (Object neighbor : neighborIndex.neighborsOf(s)) {
@@ -328,6 +347,8 @@ public class ExtractGraph {
 
                         for (String s : neighbors.keySet()) {
                             if (neighbors.get(s) == size - 1) {
+                                LOGGER.debug("Added {}", s);
+                                LOGGER.debug("Neighbors of {}: {}", s, neighborIndex.neighborsOf(s));
                                 clique.add(s);
                             }
                         }
@@ -340,13 +361,14 @@ public class ExtractGraph {
                     }
 
                     cliqueStats.add(size);
+                    cliqueAddedStats.add(clique.size());
                     StringBuffer row = new StringBuffer();
                     for (String c : clique) {
                         row.append(c).append('\t');
                     }
 
                     if (writer != null) {
-                        writer.append(row.toString().trim());
+                        writer.append(row.toString().trim()).append('\n');
                     }
                     nCliques++;
                 }
@@ -360,6 +382,7 @@ public class ExtractGraph {
             LOGGER.info("Clique stats: {}", cliqueStats);
             LOGGER.info("Skipped for birth year: {}", skipped);
             LOGGER.info("Added persons to cliques: {}", addedPersons);
+            LOGGER.info("Clique stats (new): {}", cliqueAddedStats);
             LOGGER.info("Modified cliques: {}", modifiedCliques);
 
 //            LOGGER.info(neighborIndex.neighborsOf("Nixon").toString());
@@ -377,7 +400,7 @@ public class ExtractGraph {
     }
 
     private static LinkedEntity getBest(Term term, HashMultimap<Term, LinkedEntity> linkedEntityHashMultimap,
-            HashMap<String, Integer> birthDates, Integer maxBirthYear, Integer skipped) {
+            HashMap<String, Integer> birthDates, Integer maxBirthYear, AtomicInteger skipped) {
         Map<LinkedEntity, Double> entitiesForThisTerm = new HashMap<>();
         for (LinkedEntity linkedEntity : linkedEntityHashMultimap.get(term)) {
             entitiesForThisTerm.put(linkedEntity, linkedEntity.getConfidence());
@@ -387,8 +410,8 @@ public class ExtractGraph {
         for (LinkedEntity linkedEntity : entitiesForThisTerm.keySet()) {
             Integer birthYear = birthDates.get(linkedEntity.getReference());
             if (birthYear != null && birthYear > maxBirthYear) {
-                LOGGER.debug("Skipping " + linkedEntity.getReference() + ", too young");
-                skipped++;
+                LOGGER.trace("Skipping " + linkedEntity.getReference() + ", too young");
+                skipped.incrementAndGet();
                 continue;
             }
             bestChoice = linkedEntity;
