@@ -190,8 +190,21 @@ public class EvaluateClusters {
             PrecisionRecall.Evaluator evaluatorGroups = PrecisionRecall.evaluator();
             PrecisionRecall.Evaluator evaluatorDBpediaOnlyPlus = PrecisionRecall.evaluator();
 
+            PrecisionRecall.Evaluator evaluatorBaseline = PrecisionRecall.evaluator();
+            PrecisionRecall.Evaluator evaluatorBaselineGroups = PrecisionRecall.evaluator();
+
             int linked = 0;
             int total = 0;
+
+            HashSet<String> politician = new HashSet<>();
+            DBpediaOntologyNode politicianNode = lcNodes.get("politician");
+            ArrayList<DBpediaOntologyNode> politicianNodes = ontology.getHistoryFromName(politicianNode.className);
+            for (DBpediaOntologyNode thisNode : politicianNodes) {
+                politician.add(thisNode.className);
+
+                politician.remove("Person");
+                politician.remove("Agent");
+            }
 
             lines = Files.readAllLines(goldFile.toPath());
             for (String line : lines) {
@@ -226,6 +239,7 @@ public class EvaluateClusters {
 //                        continue;
 //                    }
 
+                    // Get link from entity linking
                     String link = clLinks.get(name);
                     String link2 = null;
 
@@ -283,7 +297,6 @@ public class EvaluateClusters {
 
                     if (result2.size() == 0) {
                         if (result.size() == 0) {
-//                            nullCollection.add(thisClass);
                             nullCollection.addAll(allClasses);
                         } else {
                             evaluatorDBpediaOnlyPlus.addTP(tp);
@@ -297,6 +310,13 @@ public class EvaluateClusters {
                         evaluatorDBpediaOnlyPlus.addFP(result2.size() - tp2);
                         evaluatorDBpediaOnlyPlus.addFN(gold.size() - tp2);
                     }
+
+                    // Baseline
+                    intersection = Sets.intersection(gold, politician);
+                    tp = intersection.size();
+                    evaluatorBaseline.addTP(tp);
+                    evaluatorBaseline.addFP(politician.size() - tp);
+                    evaluatorBaseline.addFN(gold.size() - tp);
                 }
 
 //                System.out.println(line);
@@ -359,14 +379,23 @@ public class EvaluateClusters {
                     evaluatorDBpediaOnlyPlus.addFP(lineResult.size() - subTp);
                     evaluatorDBpediaOnlyPlus.addFN(gold.size() - subTp);
                 }
+
+                intersection = Sets.intersection(goldResult, politician);
+                tp = intersection.size();
+                evaluatorBaselineGroups.addTP(tp);
+                evaluatorBaselineGroups.addFP(politician.size() - tp);
+                evaluatorBaselineGroups.addFN(goldResult.size() - tp);
             }
 
             System.out.println("Total processed: " + total);
             System.out.println("Total linked: " + linked);
-            System.out.println(evaluatorDBpediaOnly.getResult());
-            System.out.println(evaluatorDBpediaOnlyPlus.getResult());
+
+            System.out.println("Baseline: " + evaluatorBaseline.getResult());
+            System.out.println("DBpedia only: " + evaluatorDBpediaOnly.getResult());
+            System.out.println("All elements in clique: " + evaluatorDBpediaOnlyPlus.getResult());
             System.out.println();
-            System.out.println(evaluatorGroups.getResult());
+            System.out.println("Baseline groups: " + evaluatorBaselineGroups.getResult());
+            System.out.println("Groups: " + evaluatorGroups.getResult());
 
         } catch (Exception e) {
             CommandLine.fail(e);
