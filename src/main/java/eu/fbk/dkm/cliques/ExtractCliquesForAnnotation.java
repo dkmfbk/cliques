@@ -1,8 +1,7 @@
 package eu.fbk.dkm.cliques;
 
 import com.google.common.collect.Sets;
-import eu.fbk.dkm.utils.CommandLine;
-import org.openrdf.query.algebra.Str;
+import eu.fbk.utils.core.CommandLine;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

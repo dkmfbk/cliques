@@ -1,7 +1,5 @@
 package eu.fbk.dkm.cliques.cat;
 
-import eu.fbk.dkm.cliques.cat.Entity;
-
 /**
  * Created by alessio on 25/01/16.
  */

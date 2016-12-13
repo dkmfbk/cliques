@@ -3,7 +3,6 @@ package eu.fbk.dkm.cliques;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.wikidata.wdtk.datamodel.interfaces.*;
-import org.wikidata.wdtk.datamodel.json.jackson.datavalues.JacksonValueItemId;
 import org.wikidata.wdtk.dumpfiles.DumpProcessingController;
 import org.wikidata.wdtk.dumpfiles.EntityTimerProcessor;
 import org.wikidata.wdtk.dumpfiles.MwLocalDumpFile;

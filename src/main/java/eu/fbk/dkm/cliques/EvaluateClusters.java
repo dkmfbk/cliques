@@ -1,18 +1,18 @@
 package eu.fbk.dkm.cliques;
 
 import com.google.common.collect.Sets;
-import eu.fbk.dkm.cliques.align.DMP;
-import eu.fbk.dkm.utils.CommandLine;
-import eu.fbk.dkm.utils.eval.PrecisionRecall;
+import eu.fbk.twm.index.FormPageSearcher;
+import eu.fbk.twm.index.PageAirpediaTypeSearcher;
+import eu.fbk.twm.index.util.FreqSetSearcher;
+import eu.fbk.twm.utils.AirpediaOntology;
+import eu.fbk.twm.utils.DBpediaOntologyNode;
+import eu.fbk.twm.utils.WeightedSet;
+import eu.fbk.utils.core.CommandLine;
+import eu.fbk.utils.core.FrequencyHashSet;
+import eu.fbk.utils.core.diff_match_patch;
+import eu.fbk.utils.eval.PrecisionRecall;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
-import org.fbk.cit.hlt.thewikimachine.index.FormPageSearcher;
-import org.fbk.cit.hlt.thewikimachine.index.PageAirpediaTypeSearcher;
-import org.fbk.cit.hlt.thewikimachine.index.util.FreqSetSearcher;
-import org.fbk.cit.hlt.thewikimachine.util.AirpediaOntology;
-import org.fbk.cit.hlt.thewikimachine.util.DBpediaOntologyNode;
-import org.fbk.cit.hlt.thewikimachine.util.FrequencyHashSet;
-import org.fbk.cit.hlt.thewikimachine.util.WeightedSet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -51,9 +51,9 @@ public class EvaluateClusters {
                             CommandLine.Type.DIRECTORY_EXISTING, true, false, true)
                     .withOption("l", "links", "Links file", "FILE", CommandLine.Type.FILE_EXISTING, true, false, true)
                     .withOption("c", "links-cluster", "Links cluster", "FILE", CommandLine.Type.FILE_EXISTING, true,
-                            false, true)
+                            false, false)
                     .withOption("m", "links-cluster-mapping", "Links cluster with mappings", "FILE",
-                            CommandLine.Type.FILE_EXISTING, true, false, true)
+                            CommandLine.Type.FILE_EXISTING, true, false, false)
                     .withLogger(LoggerFactory.getLogger("eu.fbk")).parse(args);
 
             File goldFile = cmd.getOptionValue("gold", File.class);
@@ -67,28 +67,31 @@ public class EvaluateClusters {
 
             // ---
 
-            DMP dmp = new DMP();
+            diff_match_patch dmp = new diff_match_patch();
             HashMap<String, String> clusters = new HashMap<>();
             HashMap<String, String> clLinks = new HashMap<>();
 
             Reader in;
-            in = new FileReader(linksClusterFile);
-            for (CSVRecord record : CSVFormat.newFormat('\t').parse(in)) {
-                String clusterName = record.get(0);
-                for (int i = 1; i < record.size(); i++) {
-                    clusters.put(record.get(i), clusterName);
+            if (linksClusterFile != null) {
+                in = new FileReader(linksClusterFile);
+                for (CSVRecord record : CSVFormat.newFormat('\t').parse(in)) {
+                    String clusterName = record.get(0);
+                    for (int i = 1; i < record.size(); i++) {
+                        clusters.put(record.get(i), clusterName);
+                    }
                 }
+                in.close();
             }
-            in.close();
-
-            in = new FileReader(linksClusterMapFile);
-            for (CSVRecord record : CSVFormat.newFormat('\t').parse(in)) {
-                String cluster = clusters.get(record.get(1));
-                if (cluster != null) {
-                    clusters.put(record.get(0), cluster);
+            if (linksClusterMapFile != null) {
+                in = new FileReader(linksClusterMapFile);
+                for (CSVRecord record : CSVFormat.newFormat('\t').parse(in)) {
+                    String cluster = clusters.get(record.get(1));
+                    if (cluster != null) {
+                        clusters.put(record.get(0), cluster);
+                    }
                 }
+                in.close();
             }
-            in.close();
 
             LOGGER.debug("Clusters: {}", clusters);
 
@@ -155,7 +158,7 @@ public class EvaluateClusters {
                         // Add constraints on some other features (such as Levhenstein)
                         String s1 = onlyName.replaceAll("([^a-zA-Z])[A-Z]\\.", "$1").replaceAll("\\s+", " ");
                         String s2 = linkClusterName.replaceAll("([^a-zA-Z])[A-Z]\\.", "$1").replaceAll("\\s+", " ");
-                        LinkedList<DMP.Diff> diffs = dmp.diff_main(s1, s2, false);
+                        LinkedList<diff_match_patch.Diff> diffs = dmp.diff_main(s1, s2, false);
                         int levDist = dmp.diff_levenshtein(diffs);
                         if (levDist <= MAX_LEV_DIST) {
                             LOGGER.debug("Added because of Levenshtein distance: " + levDist);
@@ -196,14 +199,14 @@ public class EvaluateClusters {
             int linked = 0;
             int total = 0;
 
-            HashSet<String> politician = new HashSet<>();
-            DBpediaOntologyNode politicianNode = lcNodes.get("politician");
-            ArrayList<DBpediaOntologyNode> politicianNodes = ontology.getHistoryFromName(politicianNode.className);
-            for (DBpediaOntologyNode thisNode : politicianNodes) {
-                politician.add(thisNode.className);
+            HashSet<String> baseline = new HashSet<>();
+            DBpediaOntologyNode baselineNode = lcNodes.get("athlete");
+            ArrayList<DBpediaOntologyNode> baselineNodes = ontology.getHistoryFromName(baselineNode.className);
+            for (DBpediaOntologyNode thisNode : baselineNodes) {
+                baseline.add(thisNode.className);
 
-                politician.remove("Person");
-                politician.remove("Agent");
+                baseline.remove("Person");
+                baseline.remove("Agent");
             }
 
             lines = Files.readAllLines(goldFile.toPath());
@@ -219,6 +222,7 @@ public class EvaluateClusters {
                 FrequencyHashSet<String> guessCount = new FrequencyHashSet<>();
 
                 String dbpClass = parts[0];
+                dbpClass = dbpClass.toLowerCase();
                 DBpediaOntologyNode node = lcNodes.get(dbpClass);
                 if (node == null) {
                     LOGGER.error("Node is null: {}", dbpClass);
@@ -243,10 +247,17 @@ public class EvaluateClusters {
                     String link = clLinks.get(name);
                     String link2 = null;
 
+//                    System.out.println(name);
+//                    System.out.println(link);
+
                     HashSet<String> result = new HashSet<>();
                     HashSet<String> result2 = new HashSet<>();
 
                     addClassesToResult(link, result, airpediaTypeSearcher, guessCount);
+
+//                    System.out.println(line);
+//                    System.out.println(link);
+//                    System.out.println(result);
 
                     if (result.size() == 0) {
                         FreqSetSearcher.Entry[] entries = formPageSearcher.search(name);
@@ -260,12 +271,18 @@ public class EvaluateClusters {
                         }
                     }
 
-                    addClassesToResult(link2, result2, airpediaTypeSearcher, null);
+//                    System.out.println(link2);
+
+                    addClassesToResult(link2, result2, airpediaTypeSearcher, guessCount);
+
+//                    System.out.println(guessCount);
+//                    System.out.println();
 
                     HashSet<String> gold = new HashSet<>();
                     HashSet<String> allClasses = new HashSet<>();
                     for (int j = 1; j < subparts.length; j++) {
                         String thisClass = subparts[j];
+                        thisClass = thisClass.toLowerCase();
                         allClasses.add(thisClass);
                         DBpediaOntologyNode thisNode = lcNodes.get(thisClass);
                         if (thisNode == null) {
@@ -312,10 +329,10 @@ public class EvaluateClusters {
                     }
 
                     // Baseline
-                    intersection = Sets.intersection(gold, politician);
+                    intersection = Sets.intersection(gold, baseline);
                     tp = intersection.size();
                     evaluatorBaseline.addTP(tp);
-                    evaluatorBaseline.addFP(politician.size() - tp);
+                    evaluatorBaseline.addFP(baseline.size() - tp);
                     evaluatorBaseline.addFN(gold.size() - tp);
                 }
 
@@ -354,6 +371,11 @@ public class EvaluateClusters {
                     }
                 }
 
+//                System.out.println(guessCount);
+//                System.out.println(goldResult);
+//                System.out.println(lineResult);
+//                System.out.println();
+
                 Sets.SetView<String> intersection = Sets.intersection(goldResult, lineResult);
                 int tp = intersection.size();
                 evaluatorGroups.addTP(tp);
@@ -380,10 +402,10 @@ public class EvaluateClusters {
                     evaluatorDBpediaOnlyPlus.addFN(gold.size() - subTp);
                 }
 
-                intersection = Sets.intersection(goldResult, politician);
+                intersection = Sets.intersection(goldResult, baseline);
                 tp = intersection.size();
                 evaluatorBaselineGroups.addTP(tp);
-                evaluatorBaselineGroups.addFP(politician.size() - tp);
+                evaluatorBaselineGroups.addFP(baseline.size() - tp);
                 evaluatorBaselineGroups.addFN(goldResult.size() - tp);
             }
 

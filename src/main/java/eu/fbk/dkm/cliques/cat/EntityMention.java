@@ -1,6 +1,5 @@
 package eu.fbk.dkm.cliques.cat;
 
-import java.util.List;
 import java.util.TreeSet;
 
 /**
@@ -8,6 +7,7 @@ import java.util.TreeSet;
  */
 
 public class EntityMention extends Entity {
+
     String subType;
     String syntacticType;
     TreeSet<Integer> tokenAnchors = new TreeSet<>();

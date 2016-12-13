@@ -1,8 +1,5 @@
 package eu.fbk.dkm.cliques.cat;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 /**
  * Created by alessio on 25/01/16.
  */

@@ -1,8 +1,8 @@
 package eu.fbk.dkm.cliques;
 
 import com.google.common.collect.HashMultimap;
-import eu.fbk.dkm.utils.CommandLine;
-import eu.fbk.dkm.utils.FrequencyHashSet;
+import eu.fbk.utils.core.CommandLine;
+import eu.fbk.utils.core.FrequencyHashSet;
 import ixa.kaflib.*;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;

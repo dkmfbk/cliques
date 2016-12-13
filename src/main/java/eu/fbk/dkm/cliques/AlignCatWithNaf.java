@@ -2,12 +2,12 @@ package eu.fbk.dkm.cliques;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Sets;
-import eu.fbk.dkm.cliques.align.DMP;
 import eu.fbk.dkm.cliques.cat.Entity;
 import eu.fbk.dkm.cliques.cat.EntityMention;
 import eu.fbk.dkm.cliques.cat.Token;
-import eu.fbk.dkm.utils.CommandLine;
-import eu.fbk.dkm.utils.eval.PrecisionRecall;
+import eu.fbk.utils.core.CommandLine;
+import eu.fbk.utils.core.diff_match_patch;
+import eu.fbk.utils.eval.PrecisionRecall;
 import ixa.kaflib.*;
 import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;

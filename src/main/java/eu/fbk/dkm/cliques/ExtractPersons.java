@@ -1,18 +1,16 @@
 package eu.fbk.dkm.cliques;
 
-import eu.fbk.dkm.utils.CommandLine;
+import eu.fbk.utils.core.CommandLine;
 import ixa.kaflib.Entity;
 import ixa.kaflib.KAFDocument;
 import ixa.kaflib.Span;
 import ixa.kaflib.Term;
 import org.apache.commons.io.FileUtils;
-import org.openrdf.query.algebra.Str;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.zip.GZIPInputStream;

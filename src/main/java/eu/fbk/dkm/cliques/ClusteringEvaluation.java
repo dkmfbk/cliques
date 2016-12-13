@@ -1,6 +1,6 @@
 package eu.fbk.dkm.cliques;
 
-import eu.fbk.dkm.utils.eval.PrecisionRecall;
+import eu.fbk.utils.eval.PrecisionRecall;
 
 import java.util.*;
 

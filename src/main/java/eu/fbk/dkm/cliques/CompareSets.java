@@ -1,12 +1,10 @@
 package eu.fbk.dkm.cliques;
 
 import com.google.common.collect.HashMultimap;
-import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
-import eu.fbk.dkm.utils.CommandLine;
+import eu.fbk.utils.core.CommandLine;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
-import org.openrdf.query.algebra.Str;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,9 +12,6 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
 
@@ -58,8 +53,7 @@ public class CompareSets {
                     Set<String> set = Sets.newHashSet(record);
                     if (add) {
                         sets.put(set.size(), set);
-                    }
-                    else {
+                    } else {
                         Set<Set<String>> thisSizeSet = sets.get(set.size());
                         for (Set<String> strings : thisSizeSet) {
                             if (Sets.symmetricDifference(strings, set).isEmpty()) {

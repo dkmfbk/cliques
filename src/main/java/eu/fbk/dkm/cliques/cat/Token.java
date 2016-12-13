@@ -1,4 +1,5 @@
 package eu.fbk.dkm.cliques.cat;
+
 import org.w3c.dom.Element;
 
 /**

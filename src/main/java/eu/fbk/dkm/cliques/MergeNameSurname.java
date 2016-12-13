@@ -1,13 +1,12 @@
 package eu.fbk.dkm.cliques;
 
-import eu.fbk.dkm.utils.CommandLine;
-import eu.fbk.dkm.utils.FrequencyHashSet;
+import eu.fbk.utils.core.CommandLine;
+import eu.fbk.utils.core.FrequencyHashSet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.*;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
