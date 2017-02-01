@@ -1,0 +1,100 @@
+- Politician	Ugo Rossi|Politician	Lorenzo Dellai|Politician	Michele Nicoletti|Politician	Silvano Grisenti|Politician	Alberto Pacher|Politician
+- Politician	Ugo Rossi|Politician	Lorenzo Dellai|Politician	Mauro Gilmozzi|Politician	Alberto Pacher|Politician	Luca Zeni|Politician	Alessandro Olivi|Politician
+- Politician	Manuela Bottamedi|Politician	Ugo Rossi|Politician	Filippo Degasperi|Politician	Diego Moltrer|Politician
+- Politician	Lorenzo Dellai|Politician	Michele Nicoletti|Politician	Flavia Fontana|Politician	Alberto Pacher|Politician	Franco Panizza|Politician|Senator
+- Politician	Giorgio Lunelli|Politician	Lorenzo Dellai|Politician	Silvano Grisenti|Politician	Alberto Pacher|Politician	Nerio Giovanazzi|Politician
+- Politician	Ugo Rossi|Politician	Lorenzo Dellai|Politician	Franco Panizza|Politician|Senator	Tiziano Mellarini|Politician	Lucia Maestri|Politician	Alessandro Olivi|Politician
+- Politician	Lorenzo Dellai|Politician	Flavia Fontana|Politician	Mauro Gilmozzi|Politician	Alberto Pacher|Politician	Franco Panizza|Politician|Senator
+- Politician	Ugo Rossi|Politician	Mauro Gilmozzi|Politician	Alberto Pacher|Politician	Franco Panizza|Politician|Senator	Michele Dallapiccola|Politician	Alessandro Olivi|Politician
+- Politician	Luis Durnwalder|Politician	Lorenzo Dellai|Politician	Bruno Dorigatti|Politician	Pino Morandini|Politician
+- Politician	Manuela Bottamedi|Politician	Filippo Degasperi|Politician	Beppe Grillo|Politician	Riccardo Fraccaro|Politician
+- Politician	Ugo Rossi|Politician	Lorenzo Dellai|Politician	Mauro Gilmozzi|Politician	Marta Dalmaso|Politician	Alberto Pacher|Politician	Pino Morandini|Politician
+- Politician	Lorenzo Dellai|Politician	Alberto Pacher|Politician	Luca Zaia|Politician	Attilio Schneck|Politician
+- Politician	Ugo Rossi|Politician	Lorenzo Dellai|Politician	Bruno Dorigatti|Politician	Michele Nicoletti|Politician	Marta Dalmaso|Politician	Alberto Pacher|Politician
+- Politician	Ugo Rossi|Politician	Giorgio Leonardi|Politician	Lorenzo Dellai|Politician	Rodolfo Borga|Politician	Nerio Giovanazzi|Politician	Marco Sembenotti|Politician
+- Politician	Ugo Rossi|Politician	Lorenzo Dellai|Politician	Mauro Gilmozzi|Politician	Marta Dalmaso|Politician	Alberto Pacher|Politician	Alessandro Olivi|Politician
+- Politician	Giorgio Lunelli|Politician	Lorenzo Dellai|Politician	Alberto Pacher|Politician	Luca Zeni|Politician	Nerio Giovanazzi|Politician
+- Politician	Giorgio Lunelli|Politician	Alberto Pacher|Politician	Roberto Bombarda|Politician	Nerio Giovanazzi|Politician
+- Politician	Ugo Rossi|Politician	Tiziano Mellarini|Politician	Nerio Giovanazzi|Politician	Michele Dallapiccola|Politician
+- Politician	Maurizio Fugatti|Politician	Lorenzo Dellai|Politician	Sergio Divina|Politician	Attilio Schneck|Politician
+- Politician	Giorgio Lunelli|Politician	Lorenzo Dellai|Politician	Tiziano Mellarini|Politician	Nerio Giovanazzi|Politician
+- Lawyer	Henry John Woodcock|Lawyer	Vincenzo Piscitelli|Lawyer	Alessandro Milita|Lawyer	Fabrizio Vanorio|Lawyer
+- MusicalArtist	Stefano Forcella|MusicalArtist	Diego Arrigoni|MusicalArtist	Enrico Zapparoli|MusicalArtist	Claudio Dirani|MusicalArtist	Kekko Silvestre|MusicalArtist
+- Person	Paolo Ghensi|Person	Laura Albertini|Person	Mauro Paglierani|Person	Giovanni Sammarco|Person
+- CrossCountrySkier	Federico Pellegrino|CrossCountrySkier	Mattia Pellegrin|CrossCountrySkier	Francesca Baudin|CrossCountrySkier	Ilaria Debertolis|CrossCountrySkier
+- BasketballPlayer	Baldi Rossi|BasketballPlayer	Marco Spanghero|BasketballPlayer	Keaton Grant|BasketballPlayer	Davide Pascolo|BasketballPlayer	Tony Mitchell|BasketballPlayer
+- Skier	Stefano Gross|Skier	Cristian Deville|Skier	Giuliano Razzoli|Skier	Patrick Thaler|Skier
+- Person	Claudio Del Fabbro|Person	Franco Michelotti|Person	Tommaso Ulivieri|Person	Nella Mattei|Person
+- VolleyballPlayer	Mattia Bosetti|VolleyballPlayer	Carlo De Angelis|VolleyballPlayer	Simone Giannelli|VolleyballPlayer	Mirco Cristofaletti|VolleyballPlayer	Davide Dainese|VolleyballPlayer	Andrea Hueller|VolleyballPlayer
+- BasketballPlayer	Marco Spanghero|BasketballPlayer	Davide Pascolo|BasketballPlayer	Tony Mitchell|BasketballPlayer	Maurizio Buscaglia|BasketballPlayer
+- Person	Mariachiara Armani|Person	Claudio Pasolli|Person	Enrico Bortolotti|Person	Giovanni Bucci|Person	Giovanni Bernardini|Person	Giovanni Zorzi|Person
+- Person	Alex Bottamedi|Person	Eduino Gabrielli|Person	Gianmaria Toscana|Person	Gianni Gottardi|Person	Aldo Perli|Person	Giuliano Bottamedi|Person
+- SoccerPlayer	Daniele De Rossi|SoccerPlayer	Claudio Marchisio|SoccerPlayer	Thiago Motta|SoccerPlayer	Riccardo Montolivo|SoccerPlayer
+- Person	Leonardo Lanzinger|Person	Matteo Tomaselli|Person	Giacomo Gilmozzi|Person	Bruno Lanzinger|Person
+- BasketballPlayer	Simone Fiorito|BasketballPlayer	Matteo Negri|BasketballPlayer	Marco Spanghero|BasketballPlayer	Davide Pascolo|BasketballPlayer	Walter Santarossa|BasketballPlayer	Marco Pazzi|BasketballPlayer	Luca Conte|BasketballPlayer
+- MusicalArtist	Mario Riso|MusicalArtist	Sasha Torrisi|Singer	Pino Scotto|Singer	Eva Poles|Singer	Marco Garrincha|MusicalArtist
+- Singer	Tiziano Ferro|Singer	Samuele Bersani|Singer	Biagio Antonacci|Singer	Miguel Bosè|Singer
+- Skier	Cyprien Richard|Skier	Ted Ligety|Skier	Davide Simoncelli|Skier	Luca De Aliprandini|Skier	Christof Innerhofer|Skier
+- BasketballPlayer	Marco Spanghero|BasketballPlayer	Davide Pascolo|BasketballPlayer	Marco Pazzi|BasketballPlayer	Luca Conte|BasketballPlayer	Maurizio Buscaglia|BasketballPlayer
+- BasketballPlayer	Simone Fiorito|BasketballPlayer	Toto Forray|BasketballPlayer	Marco Spanghero|BasketballPlayer	Marco Pazzi|BasketballPlayer	Luca Conte|BasketballPlayer
+- VolleyballPlayer	Andrea Bari|VolleyballPlayer	Emanuele Birarelli|VolleyballPlayer	Matey Kaziyski|VolleyballPlayer	Filippo Lanza|VolleyballPlayer
+- Actor	Mario Cagol|Actor	Lucio Gardin|Actor	Loredana Cont|Actor	Andrea Castelli|Actor
+- Singer	Michael Jackson|Singer	Whitney Houston|Singer	Amy Winehouse|Singer	Kurt Cobain|Singer
+- Ski_jumper	Sebastian Colloredo|Ski_jumper	Evelyn Insam|Ski_jumper	Andrea Morassi|Ski_jumper	Elena Runggaldier|Ski_jumper
+- Ski_jumper	Sebastian Colloredo|Ski_jumper	Paolo Bernardi|Ski_jumper	Andrea Morassi|Ski_jumper	Davide Bresadola|Ski_jumper
+- Singer	Tiziano Ferro|Singer	Samuele Bersani|Singer	Biagio Antonacci|Singer	Franco Battiato|Singer
+- CrossCountrySkier	Francesca Baudin|CrossCountrySkier	Greta Laurent|CrossCountrySkier	David Hofer|CrossCountrySkier	Ilaria Debertolis|CrossCountrySkier
+- Person	Anna Tatangelo|Singer	Stefano Campagna|Journalist	Lucrezia Lante|Actor	Bobo Vieri|SoccerPlayer
+- BasketballPlayer	Luca Garri|BasketballPlayer	Michael Umeh|BasketballPlayer	Marco Spanghero|BasketballPlayer	Davide Pascolo|BasketballPlayer	Luca Conte|BasketballPlayer
+- BasketballPlayer	Brandon Triche|BasketballPlayer	Filippo Baldi Rossi|BasketballPlayer	Marco Spanghero|BasketballPlayer	Davide Pascolo|BasketballPlayer
+- MusicalArtist	Jimmy Page|MusicalArtist	Robert Plant|MusicalArtist	Jason Bonham|MusicalArtist	John Paul Jones|MusicalArtist
+- Cyclist	Giuseppe Saronni|Cyclist	Maurizio Fondriest|Cyclist	Francesco Moser|Cyclist	Moreno Argentin|Cyclist
+- VolleyballPlayer	Mattia Bosetti|VolleyballPlayer	Carlo De Angelis|VolleyballPlayer	Francesco Conci|VolleyballPlayer	Luca Massaccesi|VolleyballPlayer	Simone Giannelli|VolleyballPlayer	Mirco Cristofaletti|VolleyballPlayer
+- Cyclist	Marzio Deho|Cyclist	Mirko Celestino|Cyclist	Johann Pallhuber|Cyclist	Massimo Debertolis|Cyclist	John Botero Salazar|Cyclist
+- Person	Ferruccio Pisoni|Politician	Cesare Cornella|Person	Alberto Tafner|Journalist	Franca Dalvit|Person	Marco Viola|Person	Carlo Basani|Person
+- Person	Marco Paolini|Actor	Giuseppe Battiston|Actor	Andrea Segre|Person	Stefano Liberti|Writer
+- Singer	Roberto Laino|Singer	Paolo Mairer|Singer	Renato Labalestra|Singer	Max Vit|Singer	Pietro Cappelletti|Singer	Sergio Tessadri|Singer
+- BasketballPlayer	Baldi Rossi|BasketballPlayer	Keaton Grant|BasketballPlayer	Josh Owens|BasketballPlayer	Tony Mitchell|BasketballPlayer
+- Singer	Neil Young|Singer	Roger Waters|Singer	Ben Harper|Singer	Bruce Springsteen|Singer	Eddie Vedder|Singer
+- Skier	Florian Eisath|Skier	Davide Simoncelli|Skier	Luca De Aliprandini|Skier	Roberto Nani|Skier	Massimiliano Blardone|Skier	Christof Innerhofer|Skier	Giovanni Borsotti|Skier
+- BasketballPlayer	Luca Garri|BasketballPlayer	Barry Jaquawn Elder|BasketballPlayer	Michael Umeh|BasketballPlayer	Marco Spanghero|BasketballPlayer	Davide Pascolo|BasketballPlayer
+- Cyclist	Marzio Deho|Cyclist	Mirko Celestino|Cyclist	Amaya Chia|Cyclist	Massimo Debertolis|Cyclist
+- CrossCountrySkier	Federico Pellegrino|CrossCountrySkier	Francesca Baudin|CrossCountrySkier	David Hofer|CrossCountrySkier	Ilaria Debertolis|CrossCountrySkier
+- Cyclist	Marco Marcato|Cyclist	Paolo Bettini|Cyclist	Diego Ulissi|Cyclist	Dario Cataldo|Cyclist	Rinaldo Nocentini|Cyclist
+- CrossCountrySkier	De Martin Topranin|CrossCountrySkier	Gaia Vuerich|CrossCountrySkier	Francesca Baudin|CrossCountrySkier	Greta Laurent|CrossCountrySkier	Ilaria Debertolis|CrossCountrySkier
+- Person	Giorgio Moser|Person	Marco Melone|Athlete	Piervittorio Belfanti|Person	Gianni Petrollini|Athlete
+- BasketballPlayer	Brandon Triche|BasketballPlayer	Lorenzo Molinaro|BasketballPlayer	Davide Poltroneri|BasketballPlayer	BJ Elder|BasketballPlayer	Marco Spanghero|BasketballPlayer	Davide Pascolo|BasketballPlayer
+- Politician	Ferdinando Adornato|Politician	Mario Marazziti|Politician	Rocco Buttiglione|Politician	Paola Binetti|Politician
+- MusicalArtist	Carlo Boninsegna|MusicalArtist	Matteo Scalet|MusicalArtist	Andrea Simon|MusicalArtist	Guido Gadenz|MusicalArtist
+- Skier	Cyprien Richard|Skier	Ted Ligety|Skier	Philipp Schoerghofer|Skier	Fritz Dopfer|Skier
+- CrossCountrySkier	Roland Clara|CrossCountrySkier	Valerio Checchi|CrossCountrySkier	Giorgio Di Centa|CrossCountrySkier	Dietmar Noeckler|CrossCountrySkier	David Hofer|CrossCountrySkier
+- Politician	Angelino Alfano|Politician	Giorgio Napolitano|Politician	Enrico Letta|Politician	Gaetano Quagliariello|Politician
+- CrossCountrySkier	Maicol Rastelli|CrossCountrySkier	Federico Pellegrino|CrossCountrySkier	Francesca Baudin|CrossCountrySkier	David Hofer|CrossCountrySkier
+- VolleyballPlayer	Oreste Cavuto|VolleyballPlayer	Mattia Bosetti|VolleyballPlayer	Carlo De Angelis|VolleyballPlayer	Davide Dalla Torre|VolleyballPlayer	Lorenzo Codarin|VolleyballPlayer	Simone Giannelli|VolleyballPlayer	Mirco Cristofaletti|VolleyballPlayer	Gianluca Galassi|VolleyballPlayer	Andrea Hueller|VolleyballPlayer	Andrea Tomasi|VolleyballPlayer
+- SoccerPlayer	Mario Cassano|SoccerPlayer	Luigi Sartor|SoccerPlayer	Alessandro Zamperini|SoccerPlayer	Nicola Santoni|SoccerPlayer
+- Referee	Paolo Bergamo|Referee	Salvatore Racalbuto|Referee	Paolo Bertini|Referee	Stefano Titomanlio|Referee	Pasquale Foti|Person	Leonardo Meani|Person	Pierluigi Pairetto|Referee	Luciano Moggi|Person	Claudio Puglisi|Referee	Claudio Lotito|Person	Massimo De Santis|Referee	Innocenzo Mazzini|Person	Andrea Della Valle|Person	Diego Della Valle|Person	Antonio Dattilo|Referee
+- Actor	Giorgio Pasotti|Actor	Katia Ricciarelli	Lino Zani|Person	Andrea Porporati|MovieDirector	Claudia Pandolfi|Actor
+- Politician	Dario Franceschini|Politician	Marco Reguzzoni|Politician	Siegfried Brugger|Politician	Luciano Sardelli|Politician
+- Cleric	Sean O' Malley|Cleric	Timothy Dolan|Cleric	Giuseppe Betori|Cleric	Marc Ouellet|Cleric
+- Person	Gianni Tomasi|Person	Stefano Pisetta|Person	Roberto De Laurentis|Person	Maurizio Zabbeni|Person
+- Skier	Davide Simoncelli|Skier	Stefano Gross|Skier	Luca De Aliprandini|Skier	Chiara Costazza|Skier
+- BasketballPlayer	Baldi Rossi|BasketballPlayer	BJ Elder|BasketballPlayer	Marco Spanghero|BasketballPlayer	Davide Pascolo|BasketballPlayer
+- Person	Elda Scalvenzi|Person	Maurizia Castiglioni|Person	Guido Foresti|Person	Vittorio Missoni|Person
+- Person	Claudio Del Fabbro|Person	Alessandro Betta|Person	Andrea Ravagni|Person	Virginia Boninsegna|Person	Giovanni Rullo|Person
+- BasketballPlayer	Toto Forray|BasketballPlayer	Michael Umeh|BasketballPlayer	Marco Spanghero|BasketballPlayer	Luca Conte|BasketballPlayer
+- CrossCountrySkier	Federico Pellegrino|CrossCountrySkier	Roland Clara|CrossCountrySkier	Giorgio Di Centa|CrossCountrySkier	Dietmar Noeckler|CrossCountrySkier	David Hofer|CrossCountrySkier
+- SoccerPlayer	Leonardo Bonucci|SoccerPlayer	Andrea Barzagli|SoccerPlayer	Christian Maggio|SoccerPlayer	Giorgio Chiellini|SoccerPlayer	Ignazio Abate|SoccerPlayer
+- CrossCountrySkier	Mattia Pellegrin|CrossCountrySkier	Gaia Vuerich|CrossCountrySkier	Francesca Baudin|CrossCountrySkier	Ilaria Debertolis|CrossCountrySkier
+- Politician	Andrea Olivero|Politician	Pierferdinando Casini|Politician	Gabriele Albertini|Politician	Mario Mauro|Politician
+- MusicalArtist	Daniel Calovi|MusicalArtist	Patrick Calovi|MusicalArtist	Daniel Nardon|MusicalArtist	Mauro Tomedi|MusicalArtist	Christian Nicolini|MusicalArtist	Nicola Toniolli|MusicalArtist
+- BasketballPlayer	Luca Garri|BasketballPlayer	Barry Jaquawn Elder|BasketballPlayer	Michael Umeh|BasketballPlayer	Gigi Dordei|BasketballPlayer
+- VolleyballPlayer	Mattia Bosetti|VolleyballPlayer	Carlo De Angelis|VolleyballPlayer	Davide Dalla Torre|VolleyballPlayer	Luca Massaccesi|VolleyballPlayer	Lorenzo Codarin|VolleyballPlayer	Simone Giannelli|VolleyballPlayer	Mirco Cristofaletti|VolleyballPlayer	Gianluca Galassi|VolleyballPlayer	Andrea Hueller|VolleyballPlayer	Andrea Tomasi|VolleyballPlayer
+- MusicalArtist	Lino Brotto|MusicalArtist	Gergo Borlai|MusicalArtist	Federico Malaman|MusicalArtist	Ivan Benvenuti|Person
+- Singer	Liam Payne|Singer	Louis Tomlinson|Singer	Zayn Malik|Singer	Harry Styles|Singer	Niall Horan|Singer
+- Politician	Mario Roat|Politician	Tiziana Frisanco|Politician	Sergio Paoli|Politician	Donata Soppelsa|Politician	Daniela Casagrande|Politician	Franco Demozzi|Politician
+- MilitaryPerson	Richard Ashby|MilitaryPerson	William Raney|MilitaryPerson	Chandler Seagraves|MilitaryPerson	Joseph Schweitzer|MilitaryPerson
+- Person	Pietro Di Fiore|Person	Stefania Galli|Person	Antonietta Pellegrino|Person	Gloria Bertoldi|Person
+- CrossCountrySkier	Federico Pellegrino|CrossCountrySkier	Dietmar Noeckler|CrossCountrySkier	David Hofer|CrossCountrySkier	Ilaria Debertolis|CrossCountrySkier
+- Person	Stefano Zambelli|Person	Marco Andreatta|Person	Daria de Pretis|Judge	Stefano Vitale|Person	Enrico Zaninotto|Person	Maurizio Giangiulio|Person
+- AthleticsPlayer	Nesta Carter|AthleticsPlayer	Usain Bolt|AthleticsPlayer	Michael Frater|AthleticsPlayer	Yohan Blake|AthleticsPlayer
+- Actor	Anna Foglietta|Actor	Christian De Sica|Actor	Neri Parenti|MovieDirector	Luisa Ranieri|Actor

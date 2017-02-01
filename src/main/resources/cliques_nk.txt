@@ -1,0 +1,84 @@
+-	politician	Gifford Pinchot|governor	Theodore Roosevelt|president	Wendell Willkie|politician	Franklin Roosevelt|president
+-	politician	John Swainson|governor	G. Mennen Williams|governor	Thomas Hart Benton|senator	Leonard Woodcock|ambassador	Walter Reuther|politician	Pat McNamara|senator	Don Jennings|politician
+-	politician	John Swainson|governor	G. Mennen Williams|governor	Thaddeus Machrowicz|congressman	Jim O'Hara|congressman	Pat McNamara|senator
+-	person	John Swainson|governor	G. Mennen Williams|governor	Bill Liebenow|militaryperson	Pat McNamara|senator
+-	politician	John Swainson|governor	Mayor E. F. Voorde|mayor	Thaddeus Machrowicz|congressman	Pat McNamara|senator
+-	president	Andrew Jackson|president	Thomas Jefferson|president	James Madison|president	Lyndon B. Johnson|president|vicepresident|congressman
+politician	Dorothy McDiarmid|politician	Ralph Kaul|politician	Thomas Jefferson|president	Bill Battle|governor	James Madison|president	Lyndon B. Johnson|president|vicepresident|congressman	J. Lindsay -	Almond , Jr.|governor|congressman|judge
+-	politician	Milo Singler|politician	John Reynolds|politician	Gaylord Nelson|governor	Philleo Nash|governor
+-	senator	Lewis Cass|senator|governor	Daniel Webster|senator|congressman	Henry Clay|senator|congressman	Thomas Hart Benton|senator	Sam Houston|congressman|senator|governor	Jeff Davis|senator
+-	senator	Lewis Cass|senator|governor	Daniel Webster|senator|congressman	Henry Clay|senator|congressman	John Caldwell Calhoun|vicepresident|senator|congressman	John C. Calhoun|vicepresident|senator|congressman
+-	politician	Al Smith|governor	Woodrow Wilson|president	Nelson Rockefeller|governor	Theodore Roosevelt|president
+-	politician	Mayor E. F. Voorde|mayor	Woodrow Wilson|president	Nelson Rockefeller|governor	Ken Keating|congressman
+-	politician	Woodrow Wilson|president	Charles E. Hughes|governor	Nelson Rockefeller|governor	Ken Keating|congressman	Woodrow Wilson|president
+-	politician	Charles E. Hughes|governor	Nelson Rockefeller|governor	Ken Keating|congressman	Walter Riehlman|congressman
+-	politician	George McGovern|congressman	William Proxmire|senator	Ralph Herseth|governor	Hubert H. Humphrey|vicepresident
+-	politician	George McGovern|congressman	William Proxmire|senator	Hubert H. Humphrey|vicepresident	Gene McCarthy|congressman
+-	politician	Fred Dickinson|politician	Dante Fascell|congressman	Mayor E. F. Voorde|mayor	George Smathers|congressman	Walt Rogers|congressman
+-	politician	Fred Dickinson|politician	Dante Fascell|congressman	Mayor E. F. Voorde|mayor	George Smathers|congressman	Red McEwen|politician
+-	person	Ralph Closer|journalist	Charlotte Hoyt|journalist	Theodore Roosevelt|president	Bill Buskirk|journalist	Warren G. Magnuson|senator|congressman
+-	person	Ralph Closer|journalist	Charlotte Hoyt|journalist	Fulgencio Batista|president	Fidel Castro|president|primeminister	Bill Buskirk|journalist
+-	politician	Mayor E. F. Voorde|mayor	Dean Taylor|congressman	Woodrow Wilson|president	Ken Keating|congressman
+-	politician	Jack Miller|senator	Mayor E. F. Voorde|mayor	Doug Page|politician	Charley Brown|congressman
+-	politician	Walter Wencke|politician	Hugo Fisher|senator	Clair Engle|senator|congressman	Charley Brown|congressman
+-	politician	Pat Brown|governor	Clair Engle|senator|congressman	Charley Brown|congressman	Bizz Johnson|senator|congressman
+-	politician	Harlan Hagen|congressman	Myron Frew|politician	Charley Brown|congressman	Bob Williams|politician
+senator|congressman	Daniel Webster|senator|congressman	Henry Clay|senator|congressman	John Caldwell Calhoun|vicepresident|senator|congressman	Stephen Douglas|senator|congressman	John C. -	Calhoun|vicepresident|senator|congressman
+-	journalist	Ralph Closer|journalist	Charlotte Hoyt|journalist	Bill Buskirk|journalist	Archie Wornecke|journalist
+-	journalist	J. T. Hong|journalist	Ralph Closer|journalist	Charlotte Hoyt|journalist	Bill Buskirk|journalist
+-	journalist	Chris Matthews|journalist	Ralph Closer|journalist	Charlotte Hoyt|journalist	Bill Buskirk|journalist
+-	president	Thomas Jefferson|president	Aaron Burr|politician	James Madison|president
+-	politician	Les Arends|politician	Sam Witwer|politician	Bill Stratton|governor
+-	politician	Mayor E. F. Voorde|mayor	Thaddeus Machrowicz|congressman	Henry S. Reuss|congressman
+-	person	Thomas Jefferson|president	Karl Marx|philosopher|historian	Thomas Paine|politician|philosopher
+-	person	Wendell Willkie|politician	Franklin Roosevelt|president	Albert Einstein|scientist
+-	politician	Bill Purtell|senator	Pres Bush|senator	Ed May|politician
+-	politician	Walt Horan|congressman	Lloyd Andrews|politician	Catherine May|congressman
+-	politician	Gifford Pinchot|governor	Nelson Rockefeller|governor	Theodore Roosevelt|president	Wendell Willkie|politician
+-	philosopher	Bentham|philosopher	Plato|philosopher	Aristotle|philosopher	Kant|philosopher
+-	politician	Lester Holtzman|congressman	Jimmy Delaney|politician	Joe Addabbo|politician	Bernard Helfat|politician
+-	president	Rutherford B. Hayes|president	Thomas Jefferson|president	Truman|president	John Quincy Adams|president
+-	politician	Hugh Addonizio|congressman	Thorn Lord|politician	Pete Rodino|congressman	Pete Peacock|politician
+-	politician	Harry Truman|president	Paul Powell|politician	Truman|president	Ken Gray|congressman
+-	politician	Jack Miller|senator	Norman Erbe|governor	Henry Cabot Lodge|politician	Charlie Hoeven|politician
+-	politician	G. Mennen Williams|governor	Thaddeus Machrowicz|congressman	Henry S. Reuss|congressman	B. F. Voorde|mayor
+-	president	George Washington|president	Woodrow Wilson|president	Thomas Jefferson|president	Abraham Lincoln|president	Franklin Roosevelt|president
+-	politician	Norm Clapp|politician	Bill Proxmire|senator	John Reynolds|politician	Gaylord Nelson|governor	Philleo Nash|governor
+-	person	John Vance|politician	L. C. Carpenter|economist 	Lloyd Godley|businessperson	Robert Kerr|senator	Al Johnson|businessperson
+-	politician	George Washington|president	Stalin|politician	Lenin|president	Thomas Jefferson|president	Trotsky|politician
+-	president	Woodrow Wilson|president	Harry Truman|president	FDR|president	Theodore Roosevelt|president	Abraham Lincoln|president
+-	politician	Stuart Symington|senator	Ed Long|senator|governor	Tom Eagleton|senator|governor	John Dalton|governor	Tom Hennings|senator	Charley Brown|congressman
+-	person	Thomas Jefferson|president	Abraham Lincoln|president	Karl Marx|philosopher	Franklin Roosevelt|president
+-	politician	Dwight D. Eisenhower|president	Wendell Willkie|politician	Franklin Roosevelt|president	Adlai Stevenson|governor
+-	politician	Gifford Pinchot|governor	Theodore Roosevelt|president	Wendell Willkie|politician	Franklin Roosevelt|president
+-	politician	Al Smith|governor	Woodrow Wilson|president	Nelson Rockefeller|governor	Theodore Roosevelt|president
+-	politician	Fred Dickinson|senator	Dante Fascell|congressman	Mayor E. F. Voorde|mayor	George Smathers|senator	Walt Rogers|congressman
+-	politician	Fred Dickinson|senator	Dante Fascell|congressman	Mayor E. F. Voorde|mayor	George Smathers|senator	Red McEwen|politician
+-	person	Frank O'Connor|writer	Jim Farley|politician	Bob Wagner|politician	Pat Clancy|singer
+-	senator	Lewis Cass|senator	Daniel Webster|senator	Henry Clay|senator	Thomas Hart Benton|senator	Sam Houston|senator	Jeff Davis|senator
+-	senator	Lewis Cass|senator	Daniel Webster|senator	Henry Clay|senator	John Caldwell Calhoun|senator	John C. Calhoun|senator
+-	senator	Lewis Daniel Webster|senator	Henry Clay|senator	John Caldwell Calhoun|senator	Stephen Douglas|senator	John C. Calhoun|senator
+-	politician	John Swainson|governor	Mayor E. F. Voorde|mayor	Thaddeus Machrowicz|congressman	Pat McNamara|senator
+-	politician	John Swainson|governor	G. Mennen Williams|governor	Thaddeus Machrowicz|congressman	Jim O'Hara|congressman	Pat McNamara|senator
+-	politician	Mayor E. F. Voorde|mayor	George Smathers|senator	Lyndon B. Johnson|president	Walt Rogers|congressman
+-	politician	Mayor E. F. Voorde|mayor	Mike Prendergast|politician	Abe Ribicoff|governor	Harry Brandt|politician
+-	politician	Woodrow Wilson|president	Harry Truman|president	Alben Barkley|vicepresident	Franklin Roosevelt|president
+-	journalist	Art Olszyk|journalist	Ray Doherty|journalist	Paul Ringler|journalist
+-	politician	John Swainson|governor	Pat McNamara|senator	Tom Payne|politician
+-	person	John Swainson|governor	G. Mennen Williams|governor	Bill Liebenow|militaryperson	Pat McNamara|senator
+-	politician	Mike Prendergast|politician	Abe Ribicoff|governor	Bob Wagner|politician	Jack Kelly|politician
+-	politician	Mayor E. F. Voorde|mayor	Di Salle|governor	Bob Cook|congressman	Stephen M. Young|senator
+-	politician	Mayor E. F. Voorde|mayor	Woodrow Wilson|president	Nelson Rockefeller|governor	Ken Keating|senator
+-	politician	Jack Miller|senator	Norm Erbe|governor	Ben Jensen|senator
+-	person	Ralph Closer|person	Charlotte Hoyt|person	Bill Buskirk|person	Archie Wornecke|person
+-	person	J. T. Hong|person	Ralph Closer|person	Charlotte Hoyt|person	Bill Buskirk|person
+-	person	Chris Matthews|person	Ralph Closer|person	Charlotte Hoyt|person	Bill Buskirk|person
+-	person	Ralph Closer|person	Charlotte Hoyt|person	Bill Buskirk|person	Scoop Jackson|senator	Warren G. Magnuson|senator
+-	senator	George McGovern|senator	William Proxmire|senator	Ralph Herseth|senator	Hubert H. Humphrey|senator
+-	senator	George McGovern|senator	William Proxmire|senator	Hubert H. Humphrey|senator	Gene McCarthy|senator
+-	president	Woodrow Wilson|president	James Buchanan|president	Warren G. Harding|president	Abraham Lincoln|president	Franklin Roosevelt|president
+-	politician	Woodrow Wilson|president	Charles E. Hughes|governor	Nelson Rockefeller|governor	Ken Keating|senator
+-	politician	Charles E. Hughes|governor	Nelson Rockefeller|governor	Ken Keating|senator	Walter Riehlman|congressman
+-	politician	Sam Rayburn|congressman	George Mahon|congressman	Ralph Yarborough|senator	Lyndon B. Johnson|president
+-	politician	Sam Rayburn|congressman	Ralph Yarborough|senator	Wright Patman|congressman	Lyndon B. Johnson|president	Oren Harris|congressman
+-	politician	Mayor E. F. Voorde|mayor	Dean Taylor|congressman	Woodrow Wilson|president	Ken Keating|senator
